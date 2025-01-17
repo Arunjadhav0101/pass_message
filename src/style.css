@@ -87,7 +87,6 @@ button {
   color: white; /* Button text color */
   border: none; /* Removed border for a cleaner look */
   border-radius: 10px;
-
   cursor: pointer; /* Pointer cursor to indicate it's clickable */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
@@ -108,4 +107,12 @@ button:active {
 button:focus {
   outline: 2px solid rgb(70, 140, 70); /* Green outline */
   outline-offset: 2px;
+}
+.message-output{
+  background-color: #abb0b6;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  gap: 4px;
 }
