@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(204, 243, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 400px;
+  height: auto;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  row-gap: 20px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.box {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.fa-envelope {
+  font-size: 30px;
+  padding: 7px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  color: #333; /* Optional: Change the icon color */
+}
+
+input[type='text'] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type='text']:focus {
+  border-color: #227de6;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type='text'] {
+    font-size: 0.9rem;
+  }
+}
+button {
+  padding: 10px 20px; /* Adjusted for better spacing */
+  font-size: large;
+  background-color: rgb(125, 216, 125); /* Light green */
+  color: white; /* Button text color */
+  border: none; /* Removed border for a cleaner look */
+  border-radius: 10px;
+
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Add hover effect */
+button:hover {
+  background-color: rgb(100, 190, 100); /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Add active effect */
+button:active {
+  background-color: rgb(85, 160, 85); /* Even darker green */
+  transform: scale(0.95); /* Slight press-down effect */
+}
+
+/* Add focus outline for accessibility */
+button:focus {
+  outline: 2px solid rgb(70, 140, 70); /* Green outline */
+  outline-offset: 2px;
+}
