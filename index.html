@@ -2,40 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Message App</title>
     <link rel="stylesheet" href="./src/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
   <body>
     <div class="container">
-      <h1>Pass the message</h1>
-
-      <label for="">Enter a message</label>
-      <div class="box">
-        <i class="fa-regular fa-envelope"></i>
-        <input type="text" placeholder="Enter a msg" class="massege-input" />
+      <h1>Message Board</h1>
+      
+      <div class="input-section">
+        <input type="text" placeholder="Type your message..." class="message-input" />
+        <div class="buttons">
+          <button class="btn-add">Add</button>
+          <button class="btn-clear">Clear</button>
+        </div>
       </div>
-      <ul>
 
-      </ul>
-      <button class="button">submit</button>
-      <button class="button-restart">Remove</button>
-      <div class="message-output"></div>
-
+      <ul class="message-list"></ul>
     </div>
 
-
-    <div class="change">
-      <h1>Thank You</h1>
-    </div>
+    <script src="/src/main.js"></script>
   </body>
-  <script  src="/src/main.js"></script>
 </html>

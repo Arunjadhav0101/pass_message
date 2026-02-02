@@ -1,27 +1,48 @@
-const msg = document.querySelector('.massege-input');
-const btn = document.querySelector('.button');
-const remove = document.querySelector('.button-restart');
+const messageInput = document.querySelector('.message-input');
+const addBtn = document.querySelector('.btn-add');
+const clearBtn = document.querySelector('.btn-clear');
+const messageList = document.querySelector('.message-list');
 
-
-
-remove.addEventListener('click', () => {
-  const output = document.querySelector('.message-output');
-  if (output.children.length>0) {
-    output.removeChild(output.lastElementChild);
-
+// Add message function
+function addMessage() {
+  const message = messageInput.value.trim();
+  
+  if (message === '') {
+    messageInput.focus();
+    return;
   }
-  // output.innerHTML = '';
+  
+  const li = document.createElement('li');
+  li.innerHTML = `<span>${message}</span><button class="remove-btn">×</button>`;
+  messageList.appendChild(li);
+  
+  messageInput.value = '';
+  messageInput.focus();
+}
+
+// Clear all messages function
+function clearMessages() {
+  messageList.innerHTML = '';
+  messageInput.focus();
+}
+
+// Event listeners
+addBtn.addEventListener('click', addMessage);
+clearBtn.addEventListener('click', clearMessages);
+
+// Remove single message
+messageList.addEventListener('click', (e) => {
+  if (e.target.classList.contains('remove-btn')) {
+    e.target.parentElement.remove();
+  }
 });
 
-
-btn.addEventListener('click', () => {
-  const output = document.querySelector('.message-output');
-  if (msg.value.trim() !== "") {
-    const li = document.createElement('li')
-    li.textContent =msg.value
-    output.appendChild(li);
-    msg.value = "";
+// Enter key support
+messageInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    addMessage();
   }
-  // output.innerHTML = msg.value;
-  //  msg.value = "";
- });
+});
+
+// Focus input on page load
+messageInput.focus();
