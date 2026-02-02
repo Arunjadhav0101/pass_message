@@ -1,9 +1,9 @@
-// const messageInput = document.querySelector('.message-input');
-// const addBtn = document.querySelector('.btn-add');
-// const clearBtn = document.querySelector('.btn-clear');
-// const messageList = document.querySelector('.message-list');
+const messageInput = document.querySelector('.message-input');
+const addBtn = document.querySelector('.btn-add');
+const clearBtn = document.querySelector('.btn-clear');
+const messageList = document.querySelector('.message-list');
 
-// Add message function
+Add message function
 function addMessage() {
   const message = messageInput.value.trim();
   
