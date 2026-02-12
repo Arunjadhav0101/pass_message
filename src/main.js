@@ -21,28 +21,28 @@
 }
 
 // Clear all messages function
-function clearMessages() {
-  messageList.innerHTML = '';
-  messageInput.focus();
-}
+// function clearMessages() {
+//   messageList.innerHTML = '';
+//   messageInput.focus();
+// }
 
-// Event listeners
-addBtn.addEventListener('click', addMessage);
-clearBtn.addEventListener('click', clearMessages);
+// // Event listeners
+// addBtn.addEventListener('click', addMessage);
+// clearBtn.addEventListener('click', clearMessages);
 
-// Remove single message
-messageList.addEventListener('click', (e) => {
-  if (e.target.classList.contains('remove-btn')) {
-    e.target.parentElement.remove();
-  }
-});
+// // Remove single message
+// messageList.addEventListener('click', (e) => {
+//   if (e.target.classList.contains('remove-btn')) {
+//     e.target.parentElement.remove();
+//   }
+// });
 
-// Enter key support
-messageInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    addMessage();
-  }
-});
+// // Enter key support
+// messageInput.addEventListener('keypress', (e) => {
+//   if (e.key === 'Enter') {
+//     addMessage();
+//   }
+// });
 
 // Focus input on page load
 messageInput.focus();
